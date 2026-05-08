@@ -91,12 +91,8 @@
         .logo-icon {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
+            object-fit: cover;
         }
 
         .logo-text {
@@ -1153,7 +1149,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="logo">
-                    <div class="logo-icon">💬</div>
+                    <img class="logo-icon" src="../assets/icon.png" alt="TalkSphere">
                     <span class="logo-text">TalkSphere</span>
                 </div>
                 <button class="new-chat-btn" onclick="app.newChat()">
