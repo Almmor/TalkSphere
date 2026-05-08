@@ -79,7 +79,7 @@ jobs:
             dist/*.rpm
 
   release:
-    needs: build
+    needs: [build, build-android]
     runs-on: ubuntu-latest
     if: startsWith(github.ref, 'refs/tags/')
     permissions:
@@ -112,6 +112,7 @@ jobs:
             | Windows | `TalkSphere Setup x.x.x.exe` (安装版) / `TalkSphere x.x.x.exe` (便携版) |
             | macOS | `TalkSphere-x.x.x.dmg` (Intel) / `TalkSphere-x.x.x-arm64.dmg` (Apple Silicon) |
             | Linux | `TalkSphere-x.x.x.AppImage` / `.deb` / `.rpm` |
+            | Android | `app-debug.apk` / `app-release.apk` |
 
             ### ✨ 功能特性
 
