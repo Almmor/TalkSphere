@@ -162,11 +162,25 @@ jobs:
           npx cap init TalkSphere com.talksphere.app --web-dir src/renderer
           npx cap add android
 
+      - name: Configure Gradle Mirror
+        run: |
+          mkdir -p ~/.gradle
+          cat > ~/.gradle/init.gradle << 'EOF'
+          allprojects {
+              repositories {
+                  maven { url 'https://maven.aliyun.com/repository/public' }
+                  maven { url 'https://maven.aliyun.com/repository/google' }
+                  mavenCentral()
+                  google()
+              }
+          }
+          EOF
+
       - name: Build Android APK
         run: |
           cd android
-          ./gradlew assembleDebug
-          ./gradlew assembleRelease
+          ./gradlew assembleDebug --no-daemon --stacktrace
+          ./gradlew assembleRelease --no-daemon --stacktrace
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
