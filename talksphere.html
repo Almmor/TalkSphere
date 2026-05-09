@@ -305,6 +305,7 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394a3b8' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 10px center;
+<<<<<<< HEAD
             min-width: 180px;
         }
 
@@ -334,6 +335,10 @@
 
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
+=======
+        }
+
+>>>>>>> 76b5c4dba80c67b2f27fe86241bef2f69bba37d4
         .api-status {
             display: flex;
             align-items: center;
@@ -1247,6 +1252,7 @@
             <header class="header">
                 <div class="header-left">
                     <button class="action-btn" onclick="app.toggleSidebar()">☰</button>
+<<<<<<< HEAD
                     <div class="model-actions">
                         <select class="model-select" id="modelSelect">
                             <optgroup label="OpenAI">
@@ -1327,6 +1333,82 @@
                         <button class="model-action-btn" onclick="app.fetchModels()" title="自动获取模型列表" id="fetchModelsBtn">🔄</button>
                         <button class="model-action-btn" onclick="app.showAddModel()" title="手动添加模型">➕</button>
                     </div>
+=======
+                    <select class="model-select" id="modelSelect">
+                        <optgroup label="OpenAI">
+                            <option value="gpt-4o">GPT-4o</option>
+                            <option value="gpt-4o-mini">GPT-4o Mini</option>
+                            <option value="gpt-4-turbo">GPT-4 Turbo</option>
+                            <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+                        </optgroup>
+                        <optgroup label="Anthropic">
+                            <option value="claude-3-5-sonnet-20241022">Claude 3.5 Sonnet</option>
+                            <option value="claude-3-opus-20240229">Claude 3 Opus</option>
+                            <option value="claude-3-haiku-20240307">Claude 3 Haiku</option>
+                        </optgroup>
+                        <optgroup label="Google">
+                            <option value="gemini-1.5-pro">Gemini 1.5 Pro</option>
+                            <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+                        </optgroup>
+                        <optgroup label="DeepSeek">
+                            <option value="deepseek:deepseek-chat">DeepSeek Chat</option>
+                            <option value="deepseek:deepseek-reasoner">DeepSeek R1</option>
+                        </optgroup>
+                        <optgroup label="阿里通义千问">
+                            <option value="qwen:qwen-turbo">通义千问 Turbo</option>
+                            <option value="qwen:qwen-plus">通义千问 Plus</option>
+                            <option value="qwen:qwen-max">通义千问 Max</option>
+                            <option value="qwen:qwen-long">通义千问 Long</option>
+                        </optgroup>
+                        <optgroup label="智谱GLM">
+                            <option value="zhipu:glm-4-plus">GLM-4 Plus</option>
+                            <option value="zhipu:glm-4-air">GLM-4 Air</option>
+                            <option value="zhipu:glm-4-flash">GLM-4 Flash</option>
+                            <option value="zhipu:glm-4-long">GLM-4 Long</option>
+                        </optgroup>
+                        <optgroup label="百度文心">
+                            <option value="ernie:ernie-4.0-8k">文心一言 4.0</option>
+                            <option value="ernie:ernie-3.5-8k">文心一言 3.5</option>
+                            <option value="ernie:ernie-speed-8k">文心 Speed</option>
+                        </optgroup>
+                        <optgroup label="Moonshot Kimi">
+                            <option value="moonshot:moonshot-v1-8k">Kimi 8K</option>
+                            <option value="moonshot:moonshot-v1-32k">Kimi 32K</option>
+                            <option value="moonshot:moonshot-v1-128k">Kimi 128K</option>
+                        </optgroup>
+                        <optgroup label="字节豆包">
+                            <option value="doubao:doubao-pro-32k">豆包 Pro 32K</option>
+                            <option value="doubao:doubao-lite-32k">豆包 Lite 32K</option>
+                        </optgroup>
+                        <optgroup label="硅基流动 (SiliconFlow)">
+                            <option value="siliconflow:deepseek-ai/DeepSeek-V3">DeepSeek-V3</option>
+                            <option value="siliconflow:deepseek-ai/DeepSeek-R1">DeepSeek-R1</option>
+                            <option value="siliconflow:Qwen/Qwen2.5-72B-Instruct">Qwen2.5-72B</option>
+                            <option value="siliconflow:THUDM/glm-4-9b-chat">GLM-4-9B</option>
+                            <option value="siliconflow:meta-llama/Llama-3.3-70B-Instruct">Llama-3.3-70B</option>
+                        </optgroup>
+                        <optgroup label="Together AI">
+                            <option value="together:meta-llama/Llama-3.3-70B-Instruct-Turbo">Llama-3.3-70B-Turbo</option>
+                            <option value="together:deepseek-ai/DeepSeek-V3">DeepSeek-V3</option>
+                            <option value="together:Qwen/Qwen2.5-72B-Instruct-Turbo">Qwen2.5-72B-Turbo</option>
+                        </optgroup>
+                        <optgroup label="Azure OpenAI">
+                            <option value="azure:gpt-4o">GPT-4o</option>
+                            <option value="azure:gpt-4">GPT-4</option>
+                            <option value="azure:gpt-35-turbo">GPT-3.5 Turbo</option>
+                        </optgroup>
+                        <optgroup label="OpenRouter">
+                            <option value="openrouter:anthropic/claude-3.5-sonnet">Claude 3.5 Sonnet</option>
+                            <option value="openrouter:openai/gpt-4o">GPT-4o</option>
+                            <option value="openrouter:google/gemini-1.5-pro">Gemini 1.5 Pro</option>
+                        </optgroup>
+                        <optgroup label="本地模型">
+                            <option value="ollama:llama3">Ollama - Llama 3</option>
+                            <option value="ollama:qwen2">Ollama - Qwen 2</option>
+                            <option value="ollama:mistral">Ollama - Mistral</option>
+                        </optgroup>
+                    </select>
+>>>>>>> 76b5c4dba80c67b2f27fe86241bef2f69bba37d4
                     <div class="api-status">
                         <span class="status-dot" id="statusDot"></span>
                         <span id="statusText">未连接</span>
@@ -3275,6 +3357,7 @@
                 }
             }
 
+<<<<<<< HEAD
             // 自动获取模型列表
             async fetchModels() {
                 const btn = document.getElementById('fetchModelsBtn');
@@ -3396,6 +3479,8 @@
                 this.toast(`已添加模型: ${modelName.trim()}`, 'success');
             }
 
+=======
+>>>>>>> 76b5c4dba80c67b2f27fe86241bef2f69bba37d4
             checkAPIStatus() {
                 const dot = document.getElementById('statusDot');
                 const text = document.getElementById('statusText');
